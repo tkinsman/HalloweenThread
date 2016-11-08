@@ -28,13 +28,15 @@ public class ChildFactory implements Runnable {
 
             try
             {
-                logger.info("Child " + child.getChildName() + " created");
-                Thread.sleep(2000);
+                Thread.sleep(2500);
+//                TimeUnit.SECONDS.sleep((long)(Math.random()*10));
             }
             catch(InterruptedException iex)
             {
                 iex.printStackTrace();
             }
+
+            logger.info("Child " + child.getChildName() + " created");
         }
     }
 
